@@ -16,7 +16,7 @@ describe('POST /api/departments', () => {
         expect(res.status).to.be.equal(200);
         expect(res.body.message).to.be.equal('OK');
         expect(newDepartment).to.not.be.null;
-    });
+      });
 
     after(async () => {
         await Department.deleteMany();

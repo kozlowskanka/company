@@ -45,7 +45,7 @@ exports.postNew = async (req, res) => {
       const { name } = req.body;
       const newDepartment = new Department({ name: name });
       await newDepartment.save();
-      res.json({newDepartment});
+      res.json({ message: 'OK' });
   
     } catch(err) {
       res.status(500).json({ message: err });
